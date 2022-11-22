@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Product  from "../components/Product";
 
-// import { PublicKey } from "@solana/web3.js";
 import { useWallet } from "@solana/wallet-adapter-react";
-// import dynamic from "next/dynamic";
-// import HeadComponent from '../components/Head';
-// import { useEffect, useState } from "react/cjs/react.production.min";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 // Constants
@@ -27,38 +23,31 @@ if (publicKey) {
 }
 }, [publicKey]);
 
-  // const WalletMultiButtonDynamic = dynamic(
-  //   async () => 
-  //   (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
-  //   { ssr:false }
-  // );
 
-  
   const renderNotConnectedContainer = () => (
-    <div>
-      {/* <img src="https://media.giphy.com/media/jzHFPlw89eTqU/giphy.gif" alt="emoji" /> */}
+  
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
         </div>    
-    </div>
+    
   );
 
-  const renderItemBuyContainer = () => {
+  const renderItemBuyContainer = () => (
     <div className="products-container">
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
     </div>
-  }
+  );
   
   return (
     <div className="App">
       {/* <HeadComponent/> */}
       <div className="container">
         <header className="header-container">
-        <p className="sub-text">The only emoji🤓🥷🏽 😈  store that accepts sh*tcoins</p>
+        <p className="sub-text">The only 🤓🥷🏽 😈  store that accepts sh*tcoins</p>
 
-          <p className="header"> Buildspace X vm. emoji</p>
+          <p className="header"> Buildspace X vm.</p>
         </header>
 
         <main>
