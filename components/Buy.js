@@ -20,6 +20,7 @@ export default function Buy({ itemID }){
     const orderID = useMemo(() => Keypair.generate().publicKey, []);
 
     // const [paid, setPaid] = useState(null);
+    const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState(STATUS.Initial);
 
@@ -64,7 +65,8 @@ export default function Buy({ itemID }){
             const purchased = await hasPurchased(publicKey, itemID);
             if (purchased) {
                 setStatus(STATUS.Paid);
-                console.log("Address hass already purchased this item!");
+                const item = await fetchItem(itemID);
+                setItem(item);
             }
         }
     checkPurchased();
