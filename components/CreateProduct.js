@@ -28,7 +28,7 @@ const CreateProduct = () => {
         setUploading(false);
         }
 
-        const CreateProduct = async () => {
+        const createProduct = async () => {
             try {
                 const product = { ...newProduct, ...file };
                 console.log("Sending product to api", product);
@@ -108,7 +108,7 @@ const CreateProduct = () => {
         <button
         className={styles.button}
         onClick={() => {
-            CreateProduct();
+            createProduct();
         }}
         disabled={uploading}
         >

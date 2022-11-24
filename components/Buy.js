@@ -129,9 +129,9 @@ if (status === STATUS.Paid) {
         <div>
             {status === STATUS.Paid ? (
                 <IPFSDownload 
-                filename="emojis.zip" 
-                hash="QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5" 
-                cta="Download emojis"
+                filename={item.filename} 
+                hash={item.hash} 
+               
                 />
                 ) : (
                 <button 

@@ -20,7 +20,7 @@ const [products, setProducts] = useState([]);
 const renderNotConnectedContainer = () => (
   <div>
     <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
-  <div className='="button-container'>
+  <div className='button-container'>
     <WalletMultiButton className='cta-button connect-wallet-button' />
   </div>
   </div>
